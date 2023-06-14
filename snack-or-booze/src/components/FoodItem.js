@@ -6,7 +6,8 @@ function FoodItem({ items }) {
   const navigate = useNavigate();
 
   let item = items.find((item) => item.id === id);
-  if (!item) return navigate("/");
+  console.log(item);
+  if (!item) return navigate(`/`);
 
   return (
     <section className="flex justify-center items-center mt-52">

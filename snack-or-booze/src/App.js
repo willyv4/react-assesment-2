@@ -8,6 +8,7 @@ import drinkImage from "./assets/drinks.png";
 import useFetchData from "./hooks/fetchData";
 import ItemForm from "./components/ItemForm";
 import SnackOrBoozeApi from "./components/Api";
+import NotFound from "./components/NotFound";
 
 function App() {
   const { snacks, drinks, refetchData } = useFetchData();
@@ -48,7 +49,8 @@ function App() {
               path="/additem"
               element={<ItemForm handleForm={handleAddItem} cantFind="/" />}
             />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Navigate to="/404" replace />} />
+            <Route path="/404" element={<NotFound />} />
           </Routes>
         </main>
       </BrowserRouter>

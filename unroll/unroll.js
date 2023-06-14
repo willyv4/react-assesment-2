@@ -56,7 +56,6 @@ const unroll = (matrix) => {
     }
   }
 
-  console.log(result); // Print the result array (optional)
   return result; // Return the unrolled array
 };
 
